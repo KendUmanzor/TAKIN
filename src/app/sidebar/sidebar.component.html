@@ -1,0 +1,24 @@
+<!-- sidebar.component.html -->
+<div class="flex-1 bg-gray-200 h-full">
+  <div class="p-4">
+    <button class="text-gray-700 focus:outline-none" (click)="toggleSidebar()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path *ngIf="isExpanded" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" ></path>
+        <path *ngIf="!isExpanded" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+<div [ngClass]="{'w-64': isExpanded, 'w-16': !isExpanded}" class="bg-primary-700 text-white flex flex-col overflow-hidden transition-all duration-500">
+    <!-- Contenido de la barra lateral -->
+
+    <ul class="flex-1 overflow-y-auto">
+      <!--<li class="py-2 px-4 hover:bg-gray-700">Opción 1</li>
+      <li class="py-2 px-4 hover:bg-gray-700">Opción 2</li>
+      <li class="py-2 px-4 hover:bg-gray-700">Opción 3</li>-->
+      <li (click)="logout()" class="py-2 px-4 hover:bg-primary-500" *ngIf="isExpanded"><a href="/register">Logout</a></li>
+      <li  class="py-2 px-4 hover:bg-primary-500" *ngIf="isExpanded"><a [routerLink]="['/perfil/menu']">menu usuario</a></li>
+      <li class="py-2 px-4 hover:bg-primary-500" *ngIf="isExpanded"><a href="/landing">Inicio</a></li>
+    </ul>
+  </div>
+  </div>
+

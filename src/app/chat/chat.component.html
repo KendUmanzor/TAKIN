@@ -1,0 +1,36 @@
+<div id="chat-container" class="flex" [style.transform]="chatDisplay === 'flex' ? 'translateY(0)' : 'translateY(calc(100% - 50px))'">
+    <div id="chat-header" (click)="toggleChat()">
+        <span id="chat-icon">Chat</span>
+    </div>
+    <section id="chat-body" class="flex flex-col gap-3 bg-primary-100 h-full p-4" [style.display]="chatDisplay === 'flex' ? 'flex' : 'none'">
+        <div class="flex items-start gap-2.5 w-4/5">
+            <img class="w-8 h-8 rounded-full" src="https://github.com/KendUmanzor.png" alt="imagen de perfil">
+            <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+               <div class="flex items-center space-x-2 rtl:space-x-reverse">
+                  <span class="text-sm font-semibold text-gray-900 dark:text-white">Paco Porros</span>
+                </div>
+                <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eligendi deserunt facere, corporis iusto repudiandae officiis obcaecati, nam mollitia minima neque laboriosam necessitatibus nihil? Accusantium omnis quidem facere dicta similique!</p>
+                <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Recibido</span>
+                <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+            </div>
+        </div>
+        
+        <div class="flex self-end w-4/5">
+            <div class="flex flex-col leading-1.5 p-4 pt-1 border-gray-200 bg-gray-300 rounded-s-xl rounded-ee-xl dark:bg-gray-700">
+                <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Lorem ipsum dolor sit amet, consectetuis obcaecati, nam mollitia</p>
+                <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Enviado</span>
+                <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:52</span>
+            </div>
+        </div>
+
+        <input
+      class="fixed bottom-5
+       bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-1 shadow-md focus:shadow-lg focus:shadow-rose-400 w-full"
+      autocomplete="off"
+      placeholder="escribiendo..."
+      name="text"
+      type="text"
+    />
+    </section>
+
+</div>

@@ -1,0 +1,59 @@
+<app-nav-simple></app-nav-simple>
+<div class="flex flex-auto h-screen">
+
+
+    <app-sidebar></app-sidebar>
+    <style class="blur-lg">
+        .imagen {
+            background-image: url('https://s1.significados.com/foto/destaque-profesiones.jpg');
+            height: 100%;
+            width: 1/4;
+            overflow: hidden;
+            background-color: rgb(190 24 93 / var(--tw-bg-opacity));;
+        }
+    </style>
+    <div class="flex flex-col pt-10 pl-14 gap-6  w-screen  " >
+        <div class="text-xl">Modificar correo y contraseña</div>
+        <div class="  border-2 h-max w-max min-w-min  rounded-md p-3">
+            <ul >
+<<<<<<< HEAD
+                <li >Estás registrado con el e-mail user&#64;usuario.com.
+=======
+                <li >Estás registrado con el e-mail {{perfil.email}}. 
+>>>>>>> 12027215a2952f0c94bb9b167ff59587e83ba0c1
+                    <br>A esta dirección te enviaremos las notificaciones sobre nuevas ofertas y tus postulaciones.</li>
+                    <li class=" flex justify-end">
+
+                        <button class="bg-primary-700 mt-6 rounded-md px-2 text-white ">Editar</button>
+                    </li>
+                </ul></div>
+                <div class="text-xl">Editar datos de perfil</div>
+                    <div class="border-2 h-max w-max min-w-min  rounded-md p-4">
+                        <ul>
+                            <li>Haz que tu perfil hable por ti. Actualiza tus datos personales,<br>cambia tu foto y ajusta tus preferencias para una experiencia más personalizada.</li>
+                            <li class=" flex justify-end">
+                              <a class="bg-primary-700 mt-6 rounded-md px-2 text-white"  [routerLink]="['/perfil/info/config']" routerLinkActive="router-link-active">Editar</a>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                        <div class="text-xl">Borrar tu cuenta</div>
+        <div class="relative border-2 h-max w-max min-w-min  rounded-md p-4 flex justify-between items-start">
+            <ul>
+                <li>Esta opción hace que tu cuenta  se elimine de manera definitiva <br> junto con toda tu actividad en la paginay todos los servicios contratados hasta la fecha</li>
+                <li class=" flex justify-end">
+<<<<<<< HEAD
+
+                    <button class="bg-primary-700 mt-6 rounded-md px-2 text-white">Editar</button>
+=======
+                
+                    <button class="bg-primary-700 mt-6 rounded-md px-2 text-white" (click)="borrarCuenta(perfil)">Borrar</button>
+>>>>>>> 12027215a2952f0c94bb9b167ff59587e83ba0c1
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<app-foot></app-foot>
